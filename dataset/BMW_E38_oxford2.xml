@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>BMW_E38_oxford2.jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/BMW_E38_oxford2.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>875</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1073</xmin>
+			<ymin>398</ymin>
+			<xmax>1222</xmax>
+			<ymax>477</ymax>
+		</bndbox>
+	</object>
+</annotation>

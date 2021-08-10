@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>971758.jpg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/971758.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>389</xmin>
+			<ymin>507</ymin>
+			<xmax>548</xmax>
+			<ymax>601</ymax>
+		</bndbox>
+	</object>
+</annotation>

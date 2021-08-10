@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>Q1070fot1_05.jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/Q1070fot1_05.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1700</width>
+		<height>1121</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>328</xmin>
+			<ymin>944</ymin>
+			<xmax>423</xmax>
+			<ymax>1010</ymax>
+		</bndbox>
+	</object>
+</annotation>

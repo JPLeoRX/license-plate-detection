@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>fd-mazda-rx-7_100775140_h.jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/fd-mazda-rx-7_100775140_h.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1212</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1141</xmin>
+			<ymin>748</ymin>
+			<xmax>1408</xmax>
+			<ymax>839</ymax>
+		</bndbox>
+	</object>
+</annotation>
