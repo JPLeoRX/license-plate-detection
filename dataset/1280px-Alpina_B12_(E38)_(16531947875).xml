@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1280px-Alpina_B12_(E38)_(16531947875).jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1280px-Alpina_B12_(E38)_(16531947875).jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>960</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>808</xmin>
+			<ymin>572</ymin>
+			<xmax>907</xmax>
+			<ymax>639</ymax>
+		</bndbox>
+	</object>
+</annotation>

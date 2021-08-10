@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1024px-Audi_A8_50_TDI_(D5)_–_Frontansicht,_24._Dezember_2017,_Velbert.jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1024px-Audi_A8_50_TDI_(D5)_–_Frontansicht,_24._Dezember_2017,_Velbert.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1023</width>
+		<height>464</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>70</xmin>
+			<ymin>286</ymin>
+			<xmax>171</xmax>
+			<ymax>337</ymax>
+		</bndbox>
+	</object>
+</annotation>

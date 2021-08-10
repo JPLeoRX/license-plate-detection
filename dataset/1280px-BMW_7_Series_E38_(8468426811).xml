@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1280px-BMW_7_Series_E38_(8468426811).jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1280px-BMW_7_Series_E38_(8468426811).jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>960</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1003</xmin>
+			<ymin>628</ymin>
+			<xmax>1170</xmax>
+			<ymax>759</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1280px-1988_Honda_Accord_Aerodeck_2.0_EX_(15243754588).jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1280px-1988_Honda_Accord_Aerodeck_2.0_EX_(15243754588).jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>849</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>262</xmin>
+			<ymin>619</ymin>
+			<xmax>370</xmax>
+			<ymax>669</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1280px-1992_Nissan_President_-_rear_(9326551307).jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1280px-1992_Nissan_President_-_rear_(9326551307).jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>853</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>306</xmin>
+			<ymin>613</ymin>
+			<xmax>401</xmax>
+			<ymax>687</ymax>
+		</bndbox>
+	</object>
+</annotation>
