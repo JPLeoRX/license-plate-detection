@@ -1,0 +1,26 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>1024px-Porsche_Cayenne_Turbo.jpeg</filename>
+	<path>/home/leo/tekleo/license-plate-detection/dataset/1024px-Porsche_Cayenne_Turbo.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>681</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>264</xmin>
+			<ymin>502</ymin>
+			<xmax>364</xmax>
+			<ymax>546</ymax>
+		</bndbox>
+	</object>
+</annotation>
