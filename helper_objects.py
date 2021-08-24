@@ -18,7 +18,7 @@ class Rectangle(BaseModel):
 @gen_str_repr_eq
 class LabeledBox(BaseModel):
     label: str
-    region: Rectangle
+    region: Rectangle # Relative coordinates, from 0.0 to 1.0
 
     def __init__(self, label: str, region: Rectangle) -> None:
         super().__init__(label=label, region=region)
