@@ -30,6 +30,9 @@ class Sample(BaseModel):
     image: Image
     boxes: List[LabeledBox]
 
+    class Config:
+        arbitrary_types_allowed = True
+
     def __init__(self, name: str, image: Image, boxes: List[LabeledBox]) -> None:
         super().__init__(name=name, image=image, boxes=boxes)
 
