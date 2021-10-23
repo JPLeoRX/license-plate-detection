@@ -8,7 +8,7 @@ from detectron2 import model_zoo
 from detectron2.config import get_cfg, CfgNode
 from detectron2.engine import DefaultTrainer, DefaultPredictor
 from helper_objects import Prediction, Rectangle
-from utils import convert_pil_to_cv, debug_image_cv
+from utils import convert_pil_to_cv, convert_cv_to_pil, debug_image_cv, save_image_pil
 
 
 def build_config(
@@ -48,11 +48,15 @@ def build_predictor(cfg: CfgNode) -> DefaultPredictor:
     return DefaultPredictor(cfg)
 
 
-def visualize_detectron_outputs(cfg: CfgNode, image_cv, outputs):
+def visualize_detectron_outputs(cfg: CfgNode, image_cv, image_name: str, outputs, debug: bool = True, save: bool = False):
     v = Visualizer(image_cv[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2)
     out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
     output_image_cv = out.get_image()[:, :, ::-1]
-    debug_image_cv(output_image_cv)
+    if debug:
+        debug_image_cv(output_image_cv)
+    if save:
+        output_image_pil = convert_cv_to_pil(output_image_cv)
+        save_image_pil(output_image_pil, 'test_output/' + image_name)
 
 
 def convert_detectron_outputs_to_predictions(class_labels: List[str], outputs) -> List[Prediction]:
@@ -79,9 +83,10 @@ def convert_detectron_outputs_to_predictions(class_labels: List[str], outputs) -
     return results
 
 
-def run_prediction(cfg: CfgNode, predictor: DefaultPredictor, class_labels: List[str], pil_image: Image):
+def run_prediction(cfg: CfgNode, predictor: DefaultPredictor, class_labels: List[str], pil_image: Image, debug: bool = True, save: bool = False):
     # Prep image
     cv_image = convert_pil_to_cv(pil_image)
+    image_name = pil_image.filename.replace('dataset_test', '').replace('dataset', '').strip()
 
     # Run prediction and time it
     t1 = time.time()
@@ -90,6 +95,6 @@ def run_prediction(cfg: CfgNode, predictor: DefaultPredictor, class_labels: List
     d = t2 - t1
 
     # Debug predictions
-    visualize_detectron_outputs(cfg, cv_image, outputs)
+    visualize_detectron_outputs(cfg, cv_image, image_name, outputs, debug=debug, save=save)
     predictions = convert_detectron_outputs_to_predictions(class_labels, outputs)
-    print('run_prediction(): Testing "' + pil_image.filename + '" took ' + str(round(d, 2)) + ' seconds, and resulted in predictions ' + str(predictions))
+    print('run_prediction(): Testing "' + image_name + '" took ' + str(round(d, 2)) + ' seconds, and resulted in predictions ' + str(predictions))

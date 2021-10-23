@@ -31,6 +31,10 @@ def convert_pil_to_cv(pil_image: Image):
     return cv2.cvtColor(numpy.array(pil_image), cv2.COLOR_RGB2BGR)
 
 
+def convert_cv_to_pil(cv_image) -> Image:
+    return image_main.fromarray(cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB))
+
+
 def debug_image_cv(cv_image):
     cv2.namedWindow('Debug Image', cv2.WINDOW_NORMAL)
     cv2.imshow('Debug Image', cv_image)
