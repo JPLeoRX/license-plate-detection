@@ -10,7 +10,7 @@ dataset_name = 'license-plate-detection-dataset'
 class_labels = ["plate"]
 prediction_score_threshold = 0.9
 base_lr = 0.0025
-max_iter = 50
+max_iter = 200
 batch_size = 64
 
 # Build dataset - load samples and filter out the ones with empty boxes
