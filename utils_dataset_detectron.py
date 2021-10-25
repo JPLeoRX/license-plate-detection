@@ -20,7 +20,7 @@ def build_labels_maps(samples: List[Sample]) -> (Dict[str, int], Dict[int, str])
     return labels_to_id_map, id_to_labels_map
 
 
-def convert_sample_to_detectron_dict(sample: Sample, labels_to_id_map: Dict[str, int], bbox_mode: BoxMode) -> Dict:
+def convert_sample_to_detectron_dict(sample: Sample, labels_to_id_map: Dict[str, int], bbox_mode: BoxMode = BoxMode.XYWH_ABS) -> Dict:
     # Generate ID, load image and save it in temp
     id = generate_uuid()
     image_pil = sample.image
@@ -90,7 +90,7 @@ def convert_samples_to_detectron_dicts(samples: List[Sample]) -> List[Dict]:
     labels_to_id_map, id_to_labels_map = build_labels_maps(samples)
     detectron_dicts = []
     for sample in samples:
-        d = convert_sample_to_detectron_dict(sample, labels_to_id_map, BoxMode.XYWH_ABS)
+        d = convert_sample_to_detectron_dict(sample, labels_to_id_map)
         detectron_dicts.append(d)
     return detectron_dicts
 
