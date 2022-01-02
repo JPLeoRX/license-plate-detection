@@ -1,6 +1,6 @@
 # Jump start in object detection with Detectron2 (license plate detection)
 
-This GitHub repository contains all the scripts for my license plate detection tutorial. You can read the tutorial [here on my blog](https://tekleo.net/blog/jump-start-in-object-detection-with-detectron2-(license-plate-detection)), or [here on medium]()
+This GitHub repository contains all the scripts for my license plate detection tutorial. You can read the tutorial [here on my blog](https://tekleo.net/blog/jump-start-in-object-detection-with-detectron2-(license-plate-detection)), or [here on medium](https://medium.com/@leo.ertuna/fd74dd649ca6)
 
 ![Preview](https://github.com/JPLeoRX/license-plate-detection/blob/master/preview.png?raw=True)
 
