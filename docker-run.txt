@@ -1,0 +1,2 @@
+docker build -t license-plate-detection-image .
+docker run --name=license-plate-detection --rm -ti -v /home/leo/tekleo/license-plate-detection/test_output_docker:/app/test_output license-plate-detection-image
