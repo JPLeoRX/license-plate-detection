@@ -7,8 +7,13 @@ from PIL.Image import Image
 from detectron2 import model_zoo
 from detectron2.config import get_cfg, CfgNode
 from detectron2.engine import DefaultTrainer, DefaultPredictor
+import torch
 from helper_objects import Prediction, Rectangle
 from utils import convert_pil_to_cv, convert_cv_to_pil, debug_image_cv, save_image_pil
+
+
+def is_gpu_available() -> bool:
+    return torch.cuda.is_available()
 
 
 def build_config(
@@ -23,6 +28,8 @@ def build_config(
     cfg.merge_from_file(model_zoo.get_config_file(model_zoo_config_name))
     cfg.DATASETS.TRAIN = (dataset_name,)
     cfg.DATASETS.TEST = ()
+    if not is_gpu_available():
+        cfg.MODEL.DEVICE = 'cpu'
     cfg.OUTPUT_DIR = trained_model_output_dir
     cfg.DATALOADER.NUM_WORKERS = 8
     if os.path.exists(trained_model_weights_path):
